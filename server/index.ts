@@ -9,9 +9,16 @@ const SECRET_KEY = "your-very-secret-key";
 app.use(cors());
 app.use(express.json());
 
+type UserType = {
+  id: number;
+  email: string;
+  password: string;
+  name: string;
+}
+
 // Mock user for testing
-const MOCK_USER = {
-  id: "1",
+const MOCK_USER: UserType = {
+  id: 1,
   email: "test@example.com",
   password: "password",
   name: "Test User"

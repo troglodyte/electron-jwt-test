@@ -18,7 +18,7 @@ export default function App() {
     window.auth.getToken().then(setToken).catch(() => setToken(null));
   }, []);
 
-  async function onLogin(e: React.FormEvent) {
+  async function onLogin(e: React.SubmitEvent) {
     e.preventDefault();
     setError(null);
     try {
