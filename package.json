@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && electron .",
-    "dev": "npm run build && VITE_DEV_SERVER_URL=http://localhost:5173 vite --host & tsc -p tsconfig.main.json --watch & electron .",
+    "dev": "VITE_DEV_SERVER_URL=http://localhost:5173 vite --host & tsc -p tsconfig.main.json --watch & electron .",
     "build:renderer": "vite build",
     "build:main": "tsc -p tsconfig.main.json",
     "build": "npm run build:renderer && npm run build:main && npm run build:server",
@@ -17,19 +17,25 @@
     "server": "npm run build:server && node dist/server/index.js"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.2",
+    "autoprefixer": "^10.4.23",
     "electron": "^40.1.0",
     "electron-builder": "^26.4.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "vite": "^7.3.1"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "better-sqlite3": "^12.6.2",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",

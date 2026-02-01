@@ -14,7 +14,7 @@ function createWindow() {
       nodeIntegration: false,
     },
   });
-  // win.webContents.openDevTools({ mode: "detach" });
+  win.webContents.openDevTools({ mode: "detach" });
 
   // In dev you can load Vite dev server. In prod load built files.
   const devUrl = process.env.VITE_DEV_SERVER_URL;

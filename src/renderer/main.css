@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+body {
+    background-color: wheat;
+}
+.appStyle {
+    mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/1
+    background: #dedede;
+    font-family: "system-ui";
+    padding: 1em;
+    max-width: 400px;
+}
